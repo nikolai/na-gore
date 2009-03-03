@@ -1,0 +1,4 @@
+AuthName "Log in"
+AuthType Basic
+AuthUserFile ./htdocs/na-gore/conf/.htpasswd
+require valid-user

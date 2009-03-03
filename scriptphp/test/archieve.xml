@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<archieve>
+    <archieve_entry>
+        <title>Привет</title>
+        <author>Осипов</author>
+        <pubdate>01.01.2008</pubdate>
+        <link>www1</link>
+    </archieve_entry>
+    <archieve_entry>
+        <title>Духовность сегодня?</title>
+        <author>И. Аксёнов</author>
+        <pubdate>02.02.2009</pubdate>
+        <link>www2</link>
+    </archieve_entry>
+    <archieve_entry>
+        <title>Переопределено</title>
+        <link>2009/1/osipov_duhov</link>
+    </archieve_entry>
+</archieve>
