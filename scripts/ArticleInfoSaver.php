@@ -11,6 +11,7 @@ class ArticleInfoSaver {
     var $logger;
     var $articlesInfoFile;
     var $root;
+    var $columnDelimeter = "|";
 
     /**
      * Create instance of ArticleInfoSaver.
@@ -47,18 +48,19 @@ class ArticleInfoSaver {
 
         // write to file
         for($x=0; $x < count($articleInfoArray); $x++) {
-            $record = $articleInfoArray[$x]->link . "|" .
-                      $articleInfoArray[$x]->title . "|" .
-                      $articleInfoArray[$x]->pubdate . "|" .
-                      $articleInfoArray[$x]->author. "|" .
-                      $articleInfoArray[$x]->theme. "|" .
-                      $articleInfoArray[$x]->intro. "\n";
+            $record = $articleInfoArray[$x]->link       .$this->columnDelimeter.
+                      $articleInfoArray[$x]->title      .$this->columnDelimeter.
+                      $articleInfoArray[$x]->pubdate    .$this->columnDelimeter.
+                      $articleInfoArray[$x]->author     .$this->columnDelimeter.
+                      $articleInfoArray[$x]->theme      .$this->columnDelimeter.
+                      $articleInfoArray[$x]->intro      ."\n";
 
             if (fwrite($file, $record) === FALSE) {
                 $this->logger->applogSevere("Cannot write file ($file)");
                 return;
             }
         }
+        fclose($file);
     }
 }
 ?>

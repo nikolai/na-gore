@@ -1,2 +1,5 @@
 articles/2009/1/story1.htm
 articles/2009/1/story2.php
+../articles/2009/1/osipov_duhov.php
+../articles/2009/1/osipov_duhov.php
+../articles/2009/1/osipov_duhov.php

@@ -2,6 +2,7 @@
 require_once 'FileScanner.php';
 require_once 'ArticleInfoSaver.php';
 require_once 'ArticleInfoReader.php';
+require_once 'FirsPageBuilder.php';
 
 $root = "../";
 $filter = new ArticlesFilter();
@@ -13,4 +14,7 @@ $scanner->scan($root."articles/", $root);
 
 $articleInfoSaver = new ArticleInfoSaver($root);
 $articleInfoSaver->save($articleInfoReader->articleInfoArr, true);
+
+$firstPageBuilder = new FirsPageBuilder($root);
+$firstPageBuilder->build();
 ?>
