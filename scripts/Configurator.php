@@ -29,7 +29,7 @@ class Configurator {
     private function readConfig(){
         $lines = file($this->firstpageConfigFile);
 
-        // TODO: read index articles paths to array and return it
+        // read index articles paths to array and return it
         if (!$lines || count($lines) <= 0) {
             $this->logErrorDie("Can not read configuration file '$this->firstpageConfigFile'");
         }
