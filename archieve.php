@@ -1,4 +1,4 @@
-<?php
+<?php 
 $DEBUG = false;
 require_once("scriptphp/logging.php");
 require_once("scriptphp/design_script.php");
