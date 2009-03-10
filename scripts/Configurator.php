@@ -25,6 +25,23 @@ class Configurator {
         }
         return $this->firstPageAtricleInfos;
     }
+	
+	/**
+	* Adds article path to the configuration
+	*/
+	function addFirstPageArticlePath($path) {
+        $confFile = fopen($this->firstpageConfigFile, "a");
+		
+        if (!$confFile) {
+            $this->logErrorDie("Can not open '$this->firstpageConfigFile'");
+        }
+		
+		if (fwrite($confFile, $path."\n") === FALSE) {
+			$this->logErrorDie("Cannot write file ($confFile)");
+		}
+
+        fclose($confFile); 
+    }
 
     private function readConfig(){
         $lines = file($this->firstpageConfigFile);

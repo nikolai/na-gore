@@ -5,7 +5,7 @@
     $author = "прот. Игорь Аксёнов";
     $public_date = "28.02.2009";
     $theme = "Православие и мир";
-    $intro="intro<br>вводная часть";
+    $intro="intro вводная часть";
 
     $root = ".";
     start_story($page_title, $story_title, $root);
